@@ -82,7 +82,7 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin('style.css'),
     new webpack.DefinePlugin({
-      PRODUCTION: JSON.stringify(false),
+      PRODUCTION: JSON.stringify(true),
       SERVICE_URL: JSON.stringify("https://job-search-backend-api.herokuapp.com/api/")
     }),
     new CopyWebpackPlugin([
