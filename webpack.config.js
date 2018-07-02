@@ -22,6 +22,10 @@ module.exports = {
       moment: 'moment/moment'
     },
   },
+  devServer: {
+    inline:true,
+    port: process.env.PORT || 3001
+  },
   module: {
     rules: [
       {
