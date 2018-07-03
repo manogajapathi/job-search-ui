@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button } from 'antd';
+import Jobs  from './components/jobs';
 import './App.css';
 
 class App extends Component {
@@ -7,10 +7,13 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <div>
-            <img class="logo" src="/src/imgs/logo.png" />
+          <div className="logo-style">
+            <img className="logo" src="/src/imgs/logo.png" />
           </div>
         </header>
+        <content>
+          <Jobs/>
+        </content>
       </div>
     );
   }
