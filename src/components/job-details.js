@@ -14,7 +14,7 @@ class JobDetails extends Component {
       <div>
       <div>
         <Row >
-          <Col span={16}><p className="sub-title">Results (24)</p></Col>
+          <Col span={16}><p className="sub-title">Results ({this.props.jobsList.length})</p></Col>
           <Col span={8} style={{ display: "flex" }}><p>Sort by</p>
             <Dropdown overlay={menu}>
               <Button style={{ marginLeft: 8 }}>
@@ -24,30 +24,35 @@ class JobDetails extends Component {
           </Col>
         </Row>
       </div>
+      {this.props.jobsList.length !=0 && this.props.jobsList.map((value) => {
+        return(
       <div className="job-list">
         <Row>
-          <Col span={20}><p className="sub-title">Senior Java Developer</p></Col>
-          <Col span={4}><p className="sub-title">$44 / hr</p></Col>
+          <Col span={20}><p className="sub-title">{value.jobTitle}</p></Col>
+          <Col span={4}><p className="sub-title">{value.payRate}/ hr</p></Col>
         </Row>
         <Row gutter={10}>
           <Col span={5}>Epic Coders</Col>
           <Col span={5}>Location</Col>
         </Row>
         <Row>
-          <Col span={10} style={{ display: "flex" }}>Reply rate : <p className="sub-title">78%</p></Col>
+          <Col span={10} style={{ display: "flex" }}>Reply rate : <p className="sub-title">{value.replyRate}%</p></Col>
         </Row>
         <Row gutter={20}>
-          <Col span={20}><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p></Col>
+          <Col span={20}><p>{value.jobDescription}</p></Col>
         </Row>
         <Row gutter={20}>
           <Col span={20}>
-          <Tag>UI</Tag>
-          <Tag>UX</Tag>
-          <Tag>android</Tag>
-          <Tag>javascript</Tag>
+          {
+          value.skills.map((val) =>{
+            return(
+              <Tag>{val}</Tag>
+            )
+          })}         
           </Col>
         </Row>
-      </div>
+        </div>)
+        })}
       </div>
     );
   }
