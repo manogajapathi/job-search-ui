@@ -6,4 +6,6 @@ Building a Job Search portal using the below
 - Webpack
 - LESS,SESS and SASS
 
-## Currently under development
+## Currently under development (Desktop View)
+
+Demo URL : [https://manogajapathi.github.io/job-search-ui/](https://manogajapathi.github.io/job-search-ui/)
