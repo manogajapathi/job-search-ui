@@ -28053,7 +28053,7 @@ var App = function (_Component) {
   _createClass(App, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement('div', { className: 'App' }, _react2.default.createElement('header', { className: 'App-header' }, _react2.default.createElement('div', { className: 'logo-style' }, _react2.default.createElement('img', { className: 'logo', src: '/src/imgs/logo.png' }))), _react2.default.createElement('content', null, _react2.default.createElement(_jobs2.default, null)));
+      return _react2.default.createElement('div', { className: 'App' }, _react2.default.createElement('header', { className: 'App-header' }, _react2.default.createElement('div', { className: 'logo-style' }, _react2.default.createElement('img', { className: 'logo', src: './src/imgs/logo.png' }))), _react2.default.createElement('content', null, _react2.default.createElement(_jobs2.default, null)));
     }
   }]);
 
